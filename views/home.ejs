@@ -5,7 +5,7 @@
 <% writeUps.forEach(function (article) { %> 
     
   <h3><%=article.title %></h3>
-  <p><%=article.post.substring(0,100) + "..." %> <a href="/posts/<%=article.title %>">Read More</a> </p>
+  <p><%=article.content.substring(0,100) + "..." %> <a href="/posts/<%=article._id %>">Read More</a> </p>
   
 
 <% }); %> 
