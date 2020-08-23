@@ -59,6 +59,11 @@ app.get("/contact",function(req,res){
   res.render(__dirname+"/views/contact.ejs",{contact: contactContent});
 });
 
-app.listen(2000, function() {
+
+let port = process.env.PORT;
+if(port == null || port == " "){
+  port = 2000;
+}
+app.listen(port, function() {
   console.log("Server started on port 2000");
 });
